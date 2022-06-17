@@ -167,3 +167,5 @@ for($i=0; $i <= count($areTheseFruits); $i++) {
     }
 }
 var_dump($areTheseFruits);//do not change this
+
+?>
