@@ -6,7 +6,8 @@ declare(strict_types=1);
 // sometimes, even your IDE can tell you what's wrong
 new_exercise(1);
 
-function new_exercise($x) {
+function new_exercise($x)
+{
     $block = "<br/><hr/><br/><br/>Exercise $x starts here:<br/>";
     echo $block;
 
@@ -35,8 +36,8 @@ new_exercise(4);
 // The print_r($week) should give:  Array ( [0] => mon [1] => tues [2] => wednes [3] => thurs [4] => fri [5] => satur [6] => sun )
 // Look up whats going wrong with this code, and then fix it, with ONE CHARACTER!
 
-foreach($week as $day) {
-    $day = substr($day, 0, strlen($day)-3);
+foreach ($week as $day) {
+    $day = substr($day, 0, strlen($day) - 3);
 }
 
 print_r($week[0]);
@@ -53,3 +54,29 @@ for ($letter = 'a'; $letter != 'aa'; $letter++) {
 
 print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z alfabetical array
 
+new_exercise(6);
+// === Final exercise ===
+// The fixed code should echo the following at the bottom:
+// Here is the name: $name - $name2
+// $name variables are decided as seen in the code, fix all the bugs whilst keeping the functionality!
+//$arr = [];
+/*function combineNames($str1 = "", $str2 = "") {
+    $params = [$str1, $str2];
+    foreach($params as $param) {
+        if ($param === "") {
+            $params = randomHeroName();
+        }
+    }
+    echo implode(" - ", $params);
+}*/
+function randomHeroName()
+{
+    $hero_firstnames = ["captain", "doctor", "iron", "Hank", "ant", "Wasp", "the", "Hawk", "Spider", "Black", "Carol"];
+    $hero_lastnames = ["America", "Strange", "man", "Pym", "girl", "hulk", "eye", "widow", "panther", "daredevil", "marvel"];
+    $rand = rand(0, 10);
+    $heroes = ($hero_firstnames[$rand]. " " . $hero_lastnames[$rand]);
+    return $heroes;
+}
+print_r("Here is the name: " . randomHeroName());
+
+?>

@@ -103,6 +103,7 @@ function randomHeroName()
     $heroes = [$hero_firstnames, $hero_lastnames];
     $randname = $heroes[rand(0,count($heroes))][rand(0, 10)];
 
+
     echo $randname;
 }
 
