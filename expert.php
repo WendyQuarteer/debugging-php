@@ -80,6 +80,13 @@ function randomHeroName(){
 }
 print_r("Here is the name: " . combineNames());
 
+new_exercise(7);
+function copyRight(int $year) {
+    return "&copy; $year BeCode";
+}
+//print the copyright
+echo copyRight((int) date('Y'));
+
 
 
 
